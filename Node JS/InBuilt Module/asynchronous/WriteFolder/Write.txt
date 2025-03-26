@@ -1,0 +1,6 @@
+This File has been created
+Data in file 1:[ Hi,
+My Name is Mitul Khemani ]
+Data in file 2:[ Hi,
+My name is Jairaj Khemani ]
+Write Completed

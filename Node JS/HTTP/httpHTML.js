@@ -1,8 +1,8 @@
 const fs = require('fs')
 const http = require('http')
 const readFileSync = fs.readFileSync
-const homePage = readFileSync('./index.html')
-const aboutPage = readFileSync('./about.html')
+const homePage = readFileSync('./index.html','utf8')
+const aboutPage = readFileSync('./about.html','utf8')
 const server = http.createServer((req,res)=>{
     const url = req.url
     if (url=='/'){

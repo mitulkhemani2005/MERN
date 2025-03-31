@@ -9,7 +9,7 @@ app.use(express.static('./public'))
 // app.get('/about', (req, res) => {
 //     res.status(200).sendFile(path.join(__dirname,  './public/about.html'));
 // });
- 
+
 app.get('*', (req, res) => {
     res.status(404).send('NOT FOUND');
 });

@@ -1,5 +1,8 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const data = require('./data.json');
+const fs = require('fs');
+app.use(express.urlencoded({extended : false}))
 const dataName = data.map((Names)=>{
     return(Names.first_name)
 })
@@ -22,4 +25,12 @@ app.get('/allusers/:idNumber',(req,res)=>{
     });
     res.send(details)
 })
+//problem in post method
+app.post('/newusers',(req,res)=>{
+    const newUser = req.body;
+    push(newUser);
+    fs.writeFile('./newDataUsers.json',JSON.stringify(user))
+    const data = res.json(newUser)
+})
+
 app.listen(5000,()=>{console.log('Server Refreshed')});
